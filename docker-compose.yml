@@ -1,0 +1,8 @@
+ytx-item-mysql:
+    image: mysql:5.6.23
+    ports:
+      - "13333:3306"
+    environment:
+       TZ: Asia/Shanghai
+       MYSQL_ROOT_PASSWORD: 123456
+       MYSQL_DATABASE: ytx_item
