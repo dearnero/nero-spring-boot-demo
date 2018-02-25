@@ -1,6 +1,5 @@
 package com.nero.cache;
 
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Component;
 

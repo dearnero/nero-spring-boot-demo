@@ -24,18 +24,18 @@ public class RedisConfig extends CachingConfigurerSupport {
     /*定义缓存数据 key 生成策略的bean
     包名+类名+方法名+所有参数
     */
-    @Bean
-    public KeyGenerator keyGenerator(){
-        return (target, method, params) -> {
-            StringBuilder sb = new StringBuilder();
-            sb.append(target.getClass().getName());
-            sb.append(method.getName());
-            for (Object obj : params) {
-                sb.append(obj.toString());
-            }
-            return sb.toString();
-        };
-    }
+//    @Bean
+//    public KeyGenerator keyGenerator(){
+//        return (target, method, params) -> {
+//            StringBuilder sb = new StringBuilder();
+//            sb.append(target.getClass().getName());
+//            sb.append(method.getName());
+//            for (Object obj : params) {
+//                sb.append(obj.toString());
+//            }
+//            return sb.toString();
+//        };
+//    }
 
     /*要启用spring缓存支持,需创建一个 CacheManager的 bean，CacheManager 接口有很多实现，这里Redis 的集成，用 RedisCacheManager这个实现类
     Redis 不是应用的共享内存，它只是一个内存服务器，就像 MySql 似的，
